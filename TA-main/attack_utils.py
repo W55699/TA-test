@@ -91,9 +91,11 @@ def save_results(args,my_intermediates, n):
         length = len(my_intermediate)
         for j in range(length):
             numpy_results[3 * i][j] = my_intermediate[j][0]
+            print(numpy_results[3 * i][j])
             numpy_results[3 * i + 1][j] = my_intermediate[j][1]
+            print(numpy_results[3 * i + 1][j])
             numpy_results[3 * i + 2][j] = my_intermediate[j][2]
-            
+            print(numpy_results[3 * i + 2][j])
             print(j)
         print(i)
     pandas_results = pd.DataFrame(numpy_results)
