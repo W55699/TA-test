@@ -94,11 +94,12 @@ def save_results(args,my_intermediates, n):
             numpy_results[3 * i][j] = my_intermediate[j][0]
             
             numpy_results[3 * i + 1][j] = my_intermediate[j][1]
-           
+            
+   
             numpy_results[3 * i + 2][j] = my_intermediate[j][2]
            
-            print(j)
-        print(i)
+           
+       
     pandas_results = pd.DataFrame(numpy_results)
     pandas_results.to_csv(os.path.join(path,'results.csv'))
     print('save results to:{}'.format(os.path.join(path,'results.csv')))
