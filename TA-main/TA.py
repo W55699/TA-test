@@ -137,6 +137,8 @@ if __name__ == "__main__":
         label_adv = int(my_labels_advs[image_i])
         print("\t- l2 = {}".format(my_advs_l2[image_i]))
         print("\t- {} queries\n".format(q_list[image_i]))
+    print(len(my_intermediates))
+    print(my_intermediates)
     save_results(args,my_intermediates, len(images))
 
     
