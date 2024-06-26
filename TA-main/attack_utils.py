@@ -89,7 +89,7 @@ def save_results(args,my_intermediates, n):
     numpy_results = np.full((n * 3, args.max_queries), np.nan)
     for i, my_intermediate in enumerate(my_intermediates):
         length = len(my_intermediate)
-        print(length)
+        
         for j in range(length):
             numpy_results[3 * i][j] = my_intermediate[j][0]
             
@@ -98,8 +98,9 @@ def save_results(args,my_intermediates, n):
             try:
                 numpy_results[3 * i + 2][j] = my_intermediate[j][2]
             except:
+                print(i)
                 print(j)
-                print(my_intermediate[j][2])
+                numpy_results[3 * i + 2][j] = 0
            
        
     pandas_results = pd.DataFrame(numpy_results)
