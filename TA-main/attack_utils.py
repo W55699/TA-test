@@ -95,9 +95,11 @@ def save_results(args,my_intermediates, n):
             
             numpy_results[3 * i + 1][j] = my_intermediate[j][1]
             
-   
-            numpy_results[3 * i + 2][j] = my_intermediate[j][2]
-           
+            try:
+                numpy_results[3 * i + 2][j] = my_intermediate[j][2]
+            except:
+                print(j)
+                print(my_intermediate[j][2])
            
        
     pandas_results = pd.DataFrame(numpy_results)
